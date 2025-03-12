@@ -1,2 +1,97 @@
 # teste
  
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionário</title>
+    <style>
+        body {
+            background-color: pink;
+            background-image: url('https://example.com/hearts-and-flowers.png'); /* Substitua pelo URL da imagem desejada */
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #ff69b4;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ff1493;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Questionário</h1>
+        <form id="questionario">
+            <label for="diaSemana">Qual o melhor dia da semana para sair?</label>
+            <select id="diaSemana" required>
+                <option value="">Selecione</option>
+                <option value="Segunda-feira">Segunda-feira</option>
+                <option value="Terça-feira">Terça-feira</option>
+                <option value="Quarta-feira">Quarta-feira</option>
+                <option value="Quinta-feira">Quinta-feira</option>
+                <option value="Sexta-feira">Sexta-feira</option>
+                <option value="Sábado">Sábado</option>
+                <option value="Domingo">Domingo</option>
+            </select>
+
+            <label for="encontroPerfeito">Como seria o encontro perfeito?</label>
+            <input type="text" id="encontroPerfeito" required>
+
+            <label for="melhorHorario">Qual o melhor horário?</label>
+            <input type="time" id="melhorHorario" required>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('questionario').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const diaSemana = document.getElementById('diaSemana').value;
+            const encontroPerfeito = document.getElementById('encontroPerfeito').value;
+            const melhorHorario = document.getElementById('melhorHorario').value;
+
+            console.log('Melhor dia da semana:', diaSemana);
+            console.log('Encontro perfeito:', encontroPerfeito);
+            console.log('Melhor horário:', melhorHorario);
+
+            alert(`Melhor dia da semana: ${diaSemana}\nEncontro perfeito: ${encontroPerfeito}\nMelhor horário: ${melhorHorario}\n\nEntão está marcado!`);
+        });
+    </script>
+</body>
+</html></select></form></div>
